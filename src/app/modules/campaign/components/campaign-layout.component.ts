@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xl-2 p-0">
+          <div class="col-auto p-0">
             <app-sidebar></app-sidebar>
           </div>
-          <div class="col-xl-10">
+          <div class="col-auto flex-grow-1">
             <router-outlet></router-outlet>
           </div>
         </div>

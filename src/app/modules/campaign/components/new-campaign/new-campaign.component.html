@@ -1,0 +1,33 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <h4 class="fw-semibold">Yeni Kampanya Oluştur</h4>
+  <hr />
+  <div class="mb-3">
+    <label class="form-label">Kampanya Başlığı</label>
+    <input
+      formControlName="title"
+      type="text"
+      class="form-control"
+      placeholder="*"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Kampanya Açıklaması</label>
+    <textarea
+      formControlName="description"
+      type="text"
+      class="form-control"
+      placeholder="*"
+    ></textarea>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Kampanya Puanı</label>
+    <input formControlName="point" type="number" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Kampanya Tarihi</label>
+    <input formControlName="date" type="date" class="form-control" />
+  </div>
+  <button [disabled]="form.invalid" type="submit" class="btn btn-primary">
+    Oluştur
+  </button>
+</form>
