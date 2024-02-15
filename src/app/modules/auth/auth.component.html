@@ -1,0 +1,28 @@
+<div class="auth-container">
+  <div class="logo-container">
+    <img
+      src="https://customer.moneytolia.com/assets/images/moneytolia-logo187.svg"
+      alt=""
+    />
+  </div>
+  <form [formGroup]="form" (ngSubmit)="login()" class="card rounded">
+    <div class="card-body">
+      <h4 class="card-title text-center">Hoş Geldin</h4>
+      <h6 class="text-center text-body-secondary">Hesabına giriş yap.</h6>
+      <hr />
+      <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input type="text" class="form-control" formControlName="username" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="password"
+        />
+      </div>
+      <button class="btn btn-primary w-100 mt-2">Giriş Yap</button>
+    </div>
+  </form>
+</div>

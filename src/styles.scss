@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+$primary: #ff4308;
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  font-family: "Inter", sans-serif !important;
+}
+
+.btn.btn-primary {
+  color: #fff !important;
+  padding: 1.2rem !important;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 8px !important;
+}
