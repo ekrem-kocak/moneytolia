@@ -1,7 +1,8 @@
 @import "src/styles/breakpoints.scss";
+@import "src/styles/colors.scss";
 
 .auth-container {
-  background-color: #f8fafc;
+  background-color: $secondary;
   min-height: 100vh;
   position: relative;
   display: flex;

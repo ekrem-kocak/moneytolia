@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DenemeComponent } from './components/deneme.component';
+import { CampaignLayoutComponent } from './components/campaign-layout.component';
 
-const routes: Routes = [{ path: '', component: DenemeComponent }];
+const routes: Routes = [{ path: '', component: CampaignLayoutComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

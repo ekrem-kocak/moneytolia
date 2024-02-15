@@ -1,12 +1,13 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
-import { Store } from '@ngxs/store';
-import { AuthState } from '../states/auth.state';
+import { Auth } from '../models/auth';
 
 export const authGuard: CanActivateFn = (route, state) => {
-  const loggedIn = inject(Store).selectSnapshot(AuthState.loggedIn);
+  const loggedIn: boolean = (
+    JSON.parse(localStorage.getItem('@@STATE')!).Auth as Auth.State
+  ).loggedIn;
   if (!loggedIn) {
-    inject(Router).navigate(['/']);
+    inject(Router).navigate(['/auth']);
   }
   return loggedIn;
 };
