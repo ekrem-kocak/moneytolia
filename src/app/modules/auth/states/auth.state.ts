@@ -32,7 +32,7 @@ export class AuthState {
         summary: 'Giriş Başarılı!',
         detail: 'Hoş geldiniz.',
       });
-      this.router.navigate(['/campaign']);
+      this.router.navigate(['/']);
     } else {
       this.messageService.add({
         severity: 'error',
@@ -44,8 +44,10 @@ export class AuthState {
 
   @Action(Logout)
   logout({ patchState }: StateContext<Auth.State>) {
+    console.log("ekrem");
     patchState({
       loggedIn: false,
     });
+    this.router.navigate(['/auth']);
   }
 }

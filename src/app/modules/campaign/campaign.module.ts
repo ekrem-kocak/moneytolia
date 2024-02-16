@@ -12,6 +12,7 @@ import { CampaignState } from './states/campaign.state';
 import { CampaignListComponent } from './components/campaign-list/campaign-list.component';
 import { CampaignComponent } from './components/campaign/campaign.component';
 import { PrimengModule } from '../shared/primeng.module';
+import { AuthState } from '../auth/states/auth.state';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { PrimengModule } from '../shared/primeng.module';
     CommonModule,
     CampaignRoutingModule,
     SharedModule,
-    NgxsModule.forFeature([CampaignState]),
+    NgxsModule.forFeature([CampaignState, AuthState]),
     PrimengModule,
   ],
 })

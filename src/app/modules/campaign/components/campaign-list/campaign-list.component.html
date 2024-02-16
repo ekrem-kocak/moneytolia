@@ -1,6 +1,6 @@
-<div class="container-fluid py-2">
+<div class="container-fluid">
   <div class="row">
-    <div *ngFor="let c of campaigns$ | async" class="col-xl-4">
+    <div *ngFor="let c of campaigns$ | async" class="col-xxl-4 col-lg-6 mb-2">
       <app-campaign [campaign]="c"></app-campaign>
     </div>
   </div>

@@ -4,7 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <router-outlet></router-outlet>
-    <p-toast></p-toast>
+    <p-toast
+      [breakpoints]="{ '576px': { width: '95%', right: '0' } }"
+    ></p-toast>
   `,
 })
 export class AppComponent {}

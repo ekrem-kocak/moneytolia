@@ -3,7 +3,7 @@
     <h4 class="card-title" [innerText]="campaign.title"></h4>
     <p class="card-text" [innerText]="campaign.description"></p>
 
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between flex-xl-row flex-column">
       <div class="d-flex align-items-center">
         <span
           >Puan: <span [innerText]="campaign.point" class="fw-bold"></span
@@ -24,6 +24,7 @@
         </div>
       </div>
       <span
+      class="mt-xl-0 mt-3"
         >Tarih:
         <span
           [innerText]="campaign.date | date : 'dd.MM.yyyy'"

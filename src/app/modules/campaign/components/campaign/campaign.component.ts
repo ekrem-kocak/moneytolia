@@ -31,6 +31,8 @@ export class CampaignComponent {
     this.store.dispatch(new SetSelectedCampaignForUpdate(id));
     this.dialogService.open(NewCampaignComponent, {
       width: '50%',
+      closeOnEscape: true,
+      dismissableMask: true,
     });
   }
 }
