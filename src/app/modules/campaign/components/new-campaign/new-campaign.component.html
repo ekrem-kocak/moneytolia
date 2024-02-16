@@ -1,5 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
-  <h4 class="fw-semibold">Yeni Kampanya Oluştur</h4>
+  <h4 class="fw-semibold">
+    {{ selectedItem ? "Kampanya Güncelleme" : "Yeni Kampanya Oluştur" }}
+  </h4>
   <hr />
   <div class="mb-3">
     <label class="form-label">Kampanya Başlığı</label>
@@ -28,6 +30,6 @@
     <input formControlName="date" type="date" class="form-control" />
   </div>
   <button [disabled]="form.invalid" type="submit" class="btn btn-primary">
-    Oluştur
+    <span [innerText]="selectedItem ? 'Güncelle' : 'Oluştur'"></span>
   </button>
 </form>

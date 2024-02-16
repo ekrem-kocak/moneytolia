@@ -11,6 +11,7 @@ import { NgxsModule } from '@ngxs/store';
 import { CampaignState } from './states/campaign.state';
 import { CampaignListComponent } from './components/campaign-list/campaign-list.component';
 import { CampaignComponent } from './components/campaign/campaign.component';
+import { PrimengModule } from '../shared/primeng.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { CampaignComponent } from './components/campaign/campaign.component';
     CampaignRoutingModule,
     SharedModule,
     NgxsModule.forFeature([CampaignState]),
+    PrimengModule,
   ],
 })
 export class CampaignModule {}

@@ -1,6 +1,7 @@
 export namespace Campaign {
   export interface State {
     items: Model[];
+    selectedItem: Model | null;
   }
 
   export interface Model {

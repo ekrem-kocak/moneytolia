@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CampaignLayoutComponent } from './components/campaign-layout.component';
 import { NewCampaignComponent } from './components/new-campaign/new-campaign.component';
 import { CampaignListComponent } from './components/campaign-list/campaign-list.component';
+import { newCampaignResolver } from './resolvers/new-campaign.resolver';
 
 const routes: Routes = [
   {
@@ -10,7 +11,11 @@ const routes: Routes = [
     component: CampaignLayoutComponent,
     children: [
       { path: '', component: CampaignListComponent },
-      { path: 'new-campaign', component: NewCampaignComponent },
+      {
+        path: 'new-campaign',
+        component: NewCampaignComponent,
+        resolve: { n: newCampaignResolver },
+      },
     ],
   },
 ];
