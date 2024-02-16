@@ -56,6 +56,16 @@ export class NewCampaignComponent {
       this.store.dispatch(
         new CreateCampaign({ ...this.form.value, id: uuidv4() })
       );
+      this.resetForm();
     }
+  }
+
+  resetForm(): void {
+    this.form.patchValue({
+      title: '',
+      description: '',
+      point: 0,
+      date: formatDate(Date.now(), 'yyyy-MM-dd', 'en'),
+    });
   }
 }

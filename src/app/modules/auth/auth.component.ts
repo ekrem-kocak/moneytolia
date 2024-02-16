@@ -11,10 +11,12 @@ import { Login } from './actions/auth.actions';
 export class AuthComponent {
   form: FormGroup;
 
+  showPassword: boolean = false;
+
   constructor(private store: Store) {
     this.form = new FormGroup({
-      username: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required),
+      username: new FormControl('ekremkocak', Validators.required),
+      password: new FormControl('ekremkocak', Validators.required),
     });
   }
 
