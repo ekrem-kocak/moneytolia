@@ -1,7 +1,21 @@
-<div class="container-fluid">
-  <div class="row">
-    <div *ngFor="let c of campaigns$ | async" class="col-xxl-4 col-lg-6 mb-2">
+<div
+  *ngIf="{
+    campaigns: campaigns$ | async
+  } as data"
+  class="container-fluid"
+>
+  <div class="row" *ngIf="data.campaigns?.length; else noCampaigns">
+    <div *ngFor="let c of data.campaigns" class="col-xxl-4 col-lg-6 mb-2">
       <app-campaign [campaign]="c"></app-campaign>
     </div>
   </div>
 </div>
+
+<ng-template #noCampaigns>
+  <div class="alert alert-primary" role="alert">
+    <h5 class="fw-semibold">Kampanya Bulunamadı!</h5>
+    <button class="btn btn-sm btn-light mt-2" routerLink="new-campaign">
+      İlk Kampanyayı Oluştur
+    </button>
+  </div>
+</ng-template>
