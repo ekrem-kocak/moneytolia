@@ -13,8 +13,8 @@ import { Logout } from 'src/app/modules/auth/actions/auth.actions';
             alt="logo"
           />
         </a>
-        <button class="btn btn-light">
-          <i (click)="logout()" class="bi bi-door-closed-fill"></i>
+        <button (click)="logout()" class="btn btn-light">
+          <i class="bi bi-door-closed-fill"></i>
         </button>
       </div>
     </nav>
