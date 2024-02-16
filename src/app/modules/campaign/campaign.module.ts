@@ -10,6 +10,7 @@ import { SharedModule } from '../shared/shared.module';
 import { NgxsModule } from '@ngxs/store';
 import { CampaignState } from './states/campaign.state';
 import { CampaignListComponent } from './components/campaign-list/campaign-list.component';
+import { CampaignComponent } from './components/campaign/campaign.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CampaignListComponent } from './components/campaign-list/campaign-list.
     SidebarComponent,
     NewCampaignComponent,
     CampaignListComponent,
+    CampaignComponent,
   ],
   imports: [
     CommonModule,

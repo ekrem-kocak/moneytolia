@@ -20,6 +20,7 @@ import { Component } from '@angular/core';
         position:sticky;
         top:0;
         padding: 24px 44px;
+        z-index:1;
       }
     `,
   ],

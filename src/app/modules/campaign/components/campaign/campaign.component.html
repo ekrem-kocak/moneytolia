@@ -1,0 +1,43 @@
+<div *ngIf="campaign" class="card">
+  <div class="card-body">
+    <h4 class="card-title" [innerText]="campaign.title"></h4>
+    <p class="card-text" [innerText]="campaign.description"></p>
+
+    <div class="d-flex justify-content-between">
+      <div class="d-flex align-items-center">
+        <span
+          >Puan: <span [innerText]="campaign.point" class="fw-bold"></span
+        ></span>
+        <div class="ms-2">
+          <button
+            (click)="setPoint(campaign.id, false)"
+            class="btn btn-sm btn-danger me-1"
+          >
+            -
+          </button>
+          <button
+            (click)="setPoint(campaign.id, true)"
+            class="btn btn-sm btn-success"
+          >
+            +
+          </button>
+        </div>
+      </div>
+      <span
+        >Tarih:
+        <span
+          [innerText]="campaign.date | date : 'dd.MM.yyyy'"
+          class="fw-bold"
+        ></span
+      ></span>
+    </div>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-warning me-2">
+      <i class="bi bi-pencil-square"></i>
+    </button>
+    <button (click)="deleteCampaign(campaign.id)" class="btn btn-danger">
+      <i class="bi bi-trash-fill"></i>
+    </button>
+  </div>
+</div>
